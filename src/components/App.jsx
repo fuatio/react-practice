@@ -4,18 +4,25 @@ import contacts from "../contacts"
 import Avatar from "./Avatar"
 import Detail from "./Detail"
 
-console.log(contacts)
+function createCard(contacts) {
+  return (
+    <Card
+    id={contacts.id}
+      key={contacts.id}
+      name={contacts.name}
+      imgURL={contacts.imgURL}
+      email={contacts.email}
+      phone={contacts.phone} />
+  )
+}
+
+
 function App() {
   return (
     <div>
-      <Avatar
-        imgURL='https://ih1.redbubble.net/image.1922391619.7469/flat,750x,075,f-pad,750x1000,f8f8f8.jpg'
-      />
-      <Detail
-        detailInfo='partner'
-      /> 
-      <h1 className="heading">My Contacts</h1>
-      <Card
+      {contacts.map(createCard)}
+
+      {/* <Card
         name={contacts[0].name}
         imgURL={contacts[0].imgURL}
         phone={contacts[0].phone}
@@ -32,7 +39,7 @@ function App() {
         imgURL={contacts[2].imgURL}
         phone={contacts[2].phone}
         email={contacts[2].email}
-      />
+      /> */}
 
     </div>
   );
