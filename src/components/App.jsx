@@ -1,46 +1,52 @@
 import React from "react";
-import Card from "./Card"
-import contacts from "../contacts"
-import Avatar from "./Avatar"
-import Detail from "./Detail"
-
-function createCard(contacts) {
-  return (
-    <Card
-    id={contacts.id}
-      key={contacts.id}
-      name={contacts.name}
-      imgURL={contacts.imgURL}
-      email={contacts.email}
-      phone={contacts.phone} />
-  )
-}
-
 
 function App() {
   return (
     <div>
-      {contacts.map(createCard)}
+      <h1>
+        <span>emojipedia</span>
+      </h1>
 
-      {/* <Card
-        name={contacts[0].name}
-        imgURL={contacts[0].imgURL}
-        phone={contacts[0].phone}
-        email={contacts[0].email}
-      />
-      <Card
-        name={contacts[1].name}
-        imgURL={contacts[1].imgURL}
-        phone={contacts[1].phone}
-        email={contacts[1].email}
-      />
-      <Card
-        name={contacts[2].name}
-        imgURL={contacts[2].imgURL}
-        phone={contacts[2].phone}
-        email={contacts[2].email}
-      /> */}
-
+      <dl className="dictionary">
+        <div className="term">
+          <dt>
+            <span className="emoji" role="img" aria-label="Tense Biceps">
+              💪
+            </span>
+            <span>Tense Biceps</span>
+          </dt>
+          <dd>
+            “You can do that!” or “I feel strong!” Arm with tense biceps. Also
+            used in connection with doing sports, e.g. at the gym.
+          </dd>
+        </div>
+        <div className="term">
+          <dt>
+            <span className="emoji" role="img" aria-label="Tense Biceps">
+              🙏
+            </span>
+            <span>Person With Folded Hands</span>
+          </dt>
+          <dd>
+            Two hands pressed together. Is currently very introverted, saying a
+            prayer, or hoping for enlightenment. Is also used as a “high five”
+            or to say thank you.
+          </dd>
+        </div>
+        <div className="term">
+          <dt>
+            <span className="emoji" role="img" aria-label="Tense Biceps">
+              🤣
+            </span>
+            <span>Rolling On The Floor, Laughing</span>
+          </dt>
+          <dd>
+            This is funny! A smiley face, rolling on the floor, laughing. The
+            face is laughing boundlessly. The emoji version of “rofl“. Stands
+            for „rolling on the floor, laughing“.
+          </dd>
+        </div>
+      </dl>
     </div>
   );
 }
