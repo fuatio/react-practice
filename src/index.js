@@ -1,5 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
+ReactDOM.render(<App />, document.getElementById("root"));
 
-ReactDOM.render(<h1>Howdy</h1>, document.getElementById("root"))
+//Challenge. Render all the notes inside notes.js as a seperate Note
+//component.

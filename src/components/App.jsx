@@ -1,12 +1,14 @@
 import React from "react";
-import Card from "./Card"
-import contacts from "../contacts"
+import Header from "./Header";
+import Footer from "./Footer";
+import Note from "./Note";
 
 function App() {
   return (
     <div>
-      <h1 className="heading">My Contacts</h1>
-
+      <Header />
+      <Note />
+      <Footer />
     </div>
   );
 }
