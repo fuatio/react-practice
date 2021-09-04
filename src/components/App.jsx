@@ -1,11 +1,12 @@
 import React from "react";
-import Login from "./Login"
+import Form from "./Form";
+
+var userIsRegistered = false;
 
 function App() {
   return (
     <div className="container">
-      <h1>Hello</h1>
-      <Login />
+      <Form />
     </div>
   );
 }
