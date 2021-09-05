@@ -16,16 +16,15 @@ function App() {
     return (
         <div className="container">
             <h1>Hello {headingText}</h1>
-            <input
-                onChange={handleChange}
-                type="text"
-                placeholder="What's your name?"
-                value={name}
-            />
-            <button
-                onClick={handleClick}>
-                Submit
-            </button>
+            <form onSubmit={handleClick}>
+                <input
+                    onChange={handleChange}
+                    type="text"
+                    placeholder="What's your name?"
+                    value={name}
+                />
+                <button>Submit</button>
+            </form>
         </div >
     );
 }
