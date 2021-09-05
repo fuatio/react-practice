@@ -17,10 +17,11 @@ h1 {
 }
 
 button {
-  display: inline-block;
+  display: inline;
   background-color: #6bbe92;
   border: 0;
-  width: 60px;
+  border-radius: 10px;
+  box-shadow: 5px;
   margin: 10px;
   text-align: center;
   color: #fff;
