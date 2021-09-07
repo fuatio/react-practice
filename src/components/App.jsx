@@ -2,18 +2,18 @@ import React, { useState } from "react";
 
 function App() {
 
-    const [name, firstName] = useState("")
+    const [firstName, setFirstName] = useState("")
 
-    function setFirstName() {
-        useState(firstName)
+    function handleFirstName() {
+        useState(setFirstName)
     }
 
 
     return (
         <div className="container">
-            <h1>Hello {setFirstName} </h1>
+            <h1>Hello {firstName} </h1>
             <form>
-                <input name="fName" placeholder="First Name" />
+                <input name="fName" placeholder="First Name" value={handleFirstName} />
                 <input name="lName" placeholder="Last Name" />
                 <button>Submit</button>
             </form>
