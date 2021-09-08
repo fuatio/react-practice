@@ -1,35 +1,39 @@
 import React, { useState } from "react";
 
 function App() {
-    const [contact, setContact] = useState({
-        fName: "",
-        lName: "",
-        email: ""
-    });
+
+    const [inputText, setInputText] = useState("An item")
+
+    const [items, setItems] = useState([])
 
     function handleChange(event) {
-        const { value, name } = event.target
+        const newValue = event.target.value
+        setInputText(newValue)
+    }
 
-        setContact(prevValue => {
-            return {
-                ...prevValue,
-                [name]: value
-            }
-        })
+    function addItem() {
+        setItems((prevItems) => {
+            return [...prevItems, inputText]
+        });
+        setInputText("");
     }
 
     return (
         <div className="container">
-            <h1>
-                Hello {contact.fName} {contact.lName}
-            </h1>
-            <p>{contact.email}</p>
-            <form>
-                <input name="fName" onChange={handleChange} placeholder="First Name" value={contact.fName} />
-                <input name="lName" onChange={handleChange} placeholder="Last Name" value={contact.lName} />
-                <input name="email" onChange={handleChange} placeholder="Email" value={contact.email} />
-                <button>Submit</button>
-            </form>
+            <div className="heading">
+                <h1>To-Do List</h1>
+            </div>
+            <div className="form">
+                <input onChange={handleChange} type="text" value={inputText} />
+                <button onClick={addItem}>
+                    <span>Add</span>
+                </button>
+            </div>
+            <div>
+                <ul>
+                    {items.map((todoItem) => <li>{todoItem}</li>)}
+                </ul>
+            </div>
         </div>
     );
 }
