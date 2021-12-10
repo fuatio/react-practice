@@ -18,9 +18,8 @@ const Login = (props) => {
         enteredEmail.includes('@') && enteredPassword.trim().length > 6
       );
     }, 500);
-    
+
     return () => {
-      console.log('Cleanup')
       clearTimeout(identifier);
     };
   }, [enteredEmail, enteredPassword]); // After every login component execution
